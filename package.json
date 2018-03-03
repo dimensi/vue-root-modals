@@ -4,8 +4,17 @@
   "description": "Vue modals",
   "main": "dist/vue-root-modals.js",
   "module": "dist/vue-root-modals.es.js",
-  "repository": "https://github.com/edDimensi/vue-root-modals.git",
-  "author": "Nikita Nafranets <eddimensi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edDimensi/vue-root-modals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edDimensi/vue-root-modals/issues"
+  },
+  "author": {
+    "name": "Nikita Nafranets",
+    "email": "eddimensi@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "build": "bili"
@@ -23,5 +32,12 @@
     "rollup-plugin-vue": "^3.0.0",
     "stylus": "^0.54.5",
     "vue-template-compiler": "^2.5.13"
-  }
+  },
+  "keywords": [
+    "vue",
+    "vue.js",
+    "modals",
+    "promise",
+    "root"
+  ]
 }
