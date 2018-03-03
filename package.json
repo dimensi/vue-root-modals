@@ -2,11 +2,18 @@
   "name": "vue-modals",
   "version": "0.0.1",
   "description": "Vue modals",
-  "main": "src/index.js",
+  "main": "dist/vue-modals.js",
+  "module": "dist/vue-modals.es.js",
   "repository": "https://github.com/edDimensi/vue-modals.git",
   "author": "Nikita Nafranets <eddimensi@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "bili"
+  },
   "devDependencies": {
-    "bili": "^3.0.2"
+    "bili": "^3.0.2",
+    "rollup-plugin-stylus-css-modules": "^1.5.0",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue-template-compiler": "^2.5.13"
   }
 }
