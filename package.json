@@ -23,7 +23,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "bili"
+    "build": "bili",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
