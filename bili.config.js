@@ -1,5 +1,6 @@
 module.exports = {
   format: ['umd', 'es'],
   banner: true,
-  plugin: ['vue', 'stylus-css-modules']
+  plugin: ['vue'],
+  exports: 'named',
 }

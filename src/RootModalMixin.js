@@ -1,30 +1,30 @@
 export default {
-  name: "vue-root-modal",
-  data() {
+  name: 'vue-root-modal',
+  data () {
     return {
-      modals: this.$modals.$openedModals
-    };
+      modals: this.$modals.$openedModals,
+    }
   },
-  beforeCreate() {
-    this.$options.components = this.$modals.$components;
+  beforeCreate () {
+    this.$options.components = this.$modals.$components
   },
   methods: {
-    zIndex(modal) {
+    zIndex (modal) {
       return {
-        "z-index": modal.modalID
-      };
+        'z-index': modal.modalID,
+      }
     },
 
-    closeModal(modal) {
+    closeModal (modal) {
       if (modal.disableClose) {
-        return;
+        return
       }
 
       if (modal.notifyOnClose) {
-        modal.resolve();
+        modal.resolve()
       }
 
-      this.$modals.close(modal.modalID);
-    }
-  }
-};
+      this.$modals.close(modal.modalID)
+    },
+  },
+}

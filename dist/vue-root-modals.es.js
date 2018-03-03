@@ -1,14 +1,8 @@
 /*!
- * vue-modals v0.0.1
+ * vue-root-modals v0.0.1
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.vueModals = {})));
-}(this, (function (exports) { 'use strict';
-
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -32,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 var ModalMixin = {
-  name: "vue-root-modal",
+  name: 'vue-root-modal',
   data: function data() {
     return {
       modals: this.$modals.$openedModals
@@ -44,7 +38,7 @@ var ModalMixin = {
   methods: {
     zIndex: function zIndex(modal) {
       return {
-        "z-index": modal.modalID
+        'z-index': modal.modalID
       };
     },
     closeModal: function closeModal(modal) {
@@ -104,17 +98,17 @@ var __$rootModalMixin = Object.assign(ModalMixin, {
 
 __$rootModalMixin.prototype = ModalMixin.prototype;
 
-var VueModals =
+var VueRootModals =
 /*#__PURE__*/
 function () {
-  function VueModals(components) {
-    _classCallCheck(this, VueModals);
+  function VueRootModals(components) {
+    _classCallCheck(this, VueRootModals);
 
     this.registedComponents = components;
     this.modals = [];
   }
 
-  _createClass(VueModals, [{
+  _createClass(VueRootModals, [{
     key: "addModal",
     value: function addModal(key, component) {
       this.registedComponents[key] = component;
@@ -152,7 +146,8 @@ function () {
       Object.keys(this.registedComponents).forEach(function (key) {
         var execModal = function execModal(options) {
           var resolve;
-          var reject;
+          var reject; // eslint-disable-next-line
+
           var promise = new Promise(function (resolveFromPromise, rejectFromPromise) {
             resolve = resolveFromPromise;
             reject = rejectFromPromise;
@@ -174,16 +169,11 @@ function () {
     }
   }]);
 
-  return VueModals;
+  return VueRootModals;
 }();
 
 var RootModal = __$rootModalMixin;
 var RootModalMixin = ModalMixin;
 
-exports.RootModal = RootModal;
-exports.RootModalMixin = RootModalMixin;
-exports['default'] = VueModals;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+export { RootModal, RootModalMixin };
+export default VueRootModals;

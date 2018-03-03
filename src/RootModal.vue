@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import rootModalMixin from "./RootModalMixin";
-export default rootModalMixin;
+import rootModalMixin from './RootModalMixin'
+export default rootModalMixin
 </script>
 
 <style lang="stylus">
@@ -54,4 +54,3 @@ export default rootModalMixin;
     color black
     cursor pointer
 </style>
-
