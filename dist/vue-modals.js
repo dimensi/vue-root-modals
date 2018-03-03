@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 var ModalMixin = {
-  name: "vue-modals-root-modal",
+  name: "vue-root-modal",
   data: function data() {
     return {
       modals: this.$modals.$openedModals
@@ -70,11 +70,11 @@ var __$rootModalMixin = Object.assign(ModalMixin, {
     var _c = _vm._self._c || _h;
 
     return _vm.modals.length ? _c('div', {
-      staticClass: "root-modal"
+      staticClass: "vue-root-modal"
     }, _vm._l(_vm.modals, function (modal) {
       return _c('div', {
         key: modal.modalID,
-        staticClass: "root-modal__wrapper",
+        staticClass: "vue-root-modal__wrapper",
         style: _vm.zIndex(modal),
         on: {
           "click": function click($event) {
@@ -86,9 +86,9 @@ var __$rootModalMixin = Object.assign(ModalMixin, {
           }
         }
       }, [_c('div', {
-        staticClass: "root-modal__body"
+        staticClass: "vue-root-modal__body"
       }, [!modal.disableClose ? _c('button', {
-        staticClass: "root-modal__close",
+        staticClass: "vue-root-modal__close",
         on: {
           "click": function click($event) {
             _vm.closeModal(modal.modalID);

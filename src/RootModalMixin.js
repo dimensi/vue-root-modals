@@ -1,5 +1,5 @@
 export default {
-  name: "vue-modals-root-modal",
+  name: "vue-root-modal",
   data() {
     return {
       modals: this.$modals.$openedModals

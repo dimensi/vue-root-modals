@@ -1,8 +1,8 @@
 <template>
-  <div class="root-modal" v-if="modals.length">
-    <div class="root-modal__wrapper" :style="zIndex(modal)" v-for="modal in modals" :key="modal.modalID" @click.self="closeModal(modal)">
-      <div class="root-modal__body">
-        <button class="root-modal__close" @click="closeModal(modal.modalID)" v-if="!modal.disableClose">
+  <div class="vue-root-modal" v-if="modals.length">
+    <div class="vue-root-modal__wrapper" :style="zIndex(modal)" v-for="modal in modals" :key="modal.modalID" @click.self="closeModal(modal)">
+      <div class="vue-root-modal__body">
+        <button class="vue-root-modal__close" @click="closeModal(modal.modalID)" v-if="!modal.disableClose">
           X
         </button>
 
@@ -18,7 +18,7 @@ export default rootModalMixin;
 </script>
 
 <style lang="stylus">
-.root-modal
+.vue-root-modal
   position fixed
   top 0
   left 0
