@@ -4,7 +4,12 @@ module.exports = {
   banner: true,
   moduleName: pgk.name,
   plugin: [
-    'vue',
+    require('rollup-plugin-vue')({
+      css: 'dist/vue-root-modals.css',
+      postcss: {
+        plugins: [require('autoprefixer')]
+      }
+    }),
     require('rollup-plugin-clear')({
       targets: ['./dist/']
     })
