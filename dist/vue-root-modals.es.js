@@ -113,11 +113,6 @@ function () {
   }
 
   _createClass(VueRootModals, [{
-    key: "addModal",
-    value: function addModal(key, component) {
-      this.registedComponents[key] = component;
-    }
-  }, {
     key: "openModal",
     value: function openModal(options) {
       options.modalID = this.modals.length + 1;
