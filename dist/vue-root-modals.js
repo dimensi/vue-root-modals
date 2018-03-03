@@ -1,5 +1,5 @@
 /*!
- * vue-root-modals v0.0.5
+ * vue-root-modals v0.0.6
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
