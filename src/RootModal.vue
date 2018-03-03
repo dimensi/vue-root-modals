@@ -1,8 +1,15 @@
 <template>
   <div class="vue-root-modal" v-if="modals.length">
-    <div class="vue-root-modal__wrapper" :style="zIndex(modal)" v-for="modal in modals" :key="modal.modalID" @click.self="closeModal(modal)">
+    <div class="vue-root-modal__wrapper"
+      :style="zIndex(modal)"
+      v-for="modal in modals"
+      :key="modal.modalID"
+      @click.self="closeModal(modal)">
+
       <div class="vue-root-modal__body">
-        <button class="vue-root-modal__close" @click="closeModal(modal.modalID)" v-if="!modal.disableClose">
+        <button class="vue-root-modal__close"
+          @click="closeModal(modal)"
+          v-if="!modal.disableClose">
           X
         </button>
 

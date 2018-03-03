@@ -1,5 +1,5 @@
 /*!
- * vue-root-modals v0.0.1
+ * vue-root-modals v0.0.2
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
@@ -89,7 +89,7 @@ var __$rootModalMixin = Object.assign(ModalMixin, {
         staticClass: "vue-root-modal__close",
         on: {
           "click": function click($event) {
-            _vm.closeModal(modal.modalID);
+            _vm.closeModal(modal);
           }
         }
       }, [_vm._v(" X ")]) : _vm._e(), _vm._v(" "), _c(modal.typeModal, _vm._b({
