@@ -52,8 +52,12 @@ var ModalMixin = {
         return;
       }
 
-      if (modal.notifyOnClose) {
+      if (modal.resolveOnClose) {
         modal.resolve();
+      }
+
+      if (modal.rejectOnClose) {
+        modal.reject();
       }
 
       this.$modals.close(modal.modalID);
