@@ -7,10 +7,6 @@ class VueRootModals {
     this.modals = []
   }
 
-  addModal (key, component) {
-    this.registedComponents[key] = component
-  }
-
   openModal (options) {
     options.modalID = this.modals.length + 1
     this.modals.push(options)
