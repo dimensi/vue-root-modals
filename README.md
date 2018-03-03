@@ -1,14 +1,25 @@
-# Vue root modals
-Это удобный менеджер модалок на promise.
+# vue-root-modals
+A handy promise-based library for modal windows.
 
-# Demo
+## Demo
 [![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/23774mk51j)
-# Установка
-`yarn add vue-root-modals` или `npm i -d vue-root-modals`
 
-# Быстрый старт
-Vue root modals не предоставляет готовых модалок, он просто позволяет их удобно вызывать и работать с ними.
-Создадим простую модалку `SimpleModal.vue`
+## Install
+
+Via Yarn:
+```
+yarn add vue-root-modals
+```
+
+Via NPM:
+```
+npm i vue-root-modals
+```
+
+## Quick start
+vue-root-modals doesn't offer ready-to-use modals, but it allows you easily create your own.
+
+Let's start with `SimpleModal.vue`:
 
 ```html
 <template>
@@ -40,29 +51,22 @@ export default {
 </style>
 ```
 
-Дальше создадим файл в котором будем хранить нужные модалки, например modals.js.  
+The next step is to create a file which holds all your modals. For example, `modals.js`:
+  
 ```js
-import RootModals from "vue-root-modals"; // импортируем библиотеку
-import SimpleModal from "./SimpleModal.vue"; // импортируем нашу модалку
+import RootModals from "vue-root-modals";
+import SimpleModal from "./SimpleModal.vue";
 
+// Create new instance and pass there our modal
 const rootModals = new RootModals({
-  SimpleModal // Создаем новый инстанс и передаем в него модалку
+  SimpleModal
 });
 
-export default rootModals; // Экспортируем созданный инстанс
+export default rootModals;
 ```
 
-Дальше импортируем созданный нами modals.js в main.js и вызываем на нем Vue.use()
-```js
-import modals from './modals.js'
-Vue.use(modals)
+Then we should import `modals.js` inside `main.js` and pass `RootModals` object to `Vue.use()` method. Also you should register the library in `components`:
 
-new Vue({
-  ...
-})
-```
-
-Дальше импортируем компонент RootModal из библиотеки и определяем его в корне приложения
 ```js
 import { RootModal } from 'vue-root-modals';
 import modals from './modals.js'
@@ -81,10 +85,10 @@ new Vue({
 })
 ```
 
-Все, теперь можно вызывать модалку из любого места с помощь `this.$modals.SimpleModal({ options })`.
-Все добавленные модалки генерируют метод из ключа который передали в обьект при инициализации `new RootModals()` и добавляются в $modals.
+That's all. You can call modals from anywhere with simple `this.$modals.SimpleModal({ options })` now. All modals generate methods based on object key name you have passed to `new RootModals({...})` and then they are in `$modals`.
 
-Все `options` попадают как пропсы в модалку. Так же в модалку попадает resolve, reject, modalID свойства. Благодаря этому с модалками можно работать через промисы.
+All `options` are passed to modal as props. Also there are properties `resolve`, `reject` & `modalID`. Thanks to this you can work with modals using promises:
+
 ```js
 const methods = {
   async openModal() {
