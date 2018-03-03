@@ -1,6 +1,8 @@
+const pgk = require('./package')
 module.exports = {
-  format: ['es'],
+  format: ['umd', 'umd-min', 'es', 'cjs'],
   banner: true,
+  moduleName: pgk.name,
   plugin: [
     'vue',
     require('rollup-plugin-clear')({
@@ -8,4 +10,10 @@ module.exports = {
     })
   ],
   exports: 'named',
+  postcss: {
+    extract: false,
+    plugin: [
+      require('autoprefixer')
+    ]
+  }
 }

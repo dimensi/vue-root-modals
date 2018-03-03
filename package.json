@@ -2,8 +2,14 @@
   "name": "vue-root-modals",
   "version": "0.0.1",
   "description": "Vue modals",
-  "main": "dist/vue-root-modals.js",
+  "main": "dist/vue-root-modals.cjs.js",
   "module": "dist/vue-root-modals.es.js",
+  "cdn": "dist/vue-root-modals.js",
+  "unpkg": "dist/vue-root-modals.js",
+  "jsdelivr": "dist/vue-root-modals.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/edDimensi/vue-root-modals.git"
@@ -20,6 +26,7 @@
     "build": "bili"
   },
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
     "babel-eslint": "^8.2.2",
     "bili": "^3.0.2",
     "eslint": "^4.18.2",
@@ -40,5 +47,10 @@
     "modals",
     "promise",
     "root"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
   ]
 }
