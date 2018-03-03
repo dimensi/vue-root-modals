@@ -1,6 +1,11 @@
 module.exports = {
-  format: ['umd', 'es'],
+  format: ['es'],
   banner: true,
-  plugin: ['vue'],
+  plugin: [
+    'vue',
+    require('rollup-plugin-clear')({
+      targets: ['./dist/']
+    })
+  ],
   exports: 'named',
 }

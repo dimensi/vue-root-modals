@@ -29,6 +29,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
+    "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-vue": "^3.0.0",
     "stylus": "^0.54.5",
     "vue-template-compiler": "^2.5.13"
