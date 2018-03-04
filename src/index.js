@@ -73,12 +73,12 @@ class VueRootModals {
           reject = rejectFromPromise
         })
 
-        const config = {
+        const config = /** @type {options} */ ({
           ...options,
           resolve,
           reject,
           typeModal: key,
-        }
+        })
 
         this.openModal(config)
 

@@ -106,15 +106,41 @@ var __$rootModalMixin = Object.assign(ModalMixin, {
 
 __$rootModalMixin.prototype = ModalMixin.prototype;
 
+/**
+ * VueRootModals
+ * @class VueRootModals
+ */
+
 var VueRootModals =
 /*#__PURE__*/
 function () {
+  /**
+   * Creates an instance of VueRootModals.
+   * @param {Vue[]} components
+   * @memberof VueRootModals
+   */
   function VueRootModals(components) {
     _classCallCheck(this, VueRootModals);
 
     this.registedComponents = components;
     this.modals = [];
   }
+  /**
+   * @typedef {Object.<string,any>} options
+   * @prop {string} typeModal - key of modal
+   * @prop {number} [modalId] - id of modal
+   * @prop {function} resolve - resolve func from promise
+   * @prop {function} reject - reject func from promise
+   */
+
+  /**
+   * Push object with options for create modal
+   *
+   * @param {options} options
+   * @memberof VueRootModals
+   * @returns {void}
+   */
+
 
   _createClass(VueRootModals, [{
     key: "openModal",
@@ -122,6 +148,14 @@ function () {
       options.modalID = this.modals.length + 1;
       this.modals.push(options);
     }
+    /**
+     * Remove modal by id from array modals or clear arr modals from all modals
+     *
+     * @param {number} [modalID]
+     * @memberof VueRootModals
+     * @returns {void}
+     */
+
   }, {
     key: "closeModal",
     value: function closeModal(modalID) {

@@ -1,7 +1,8 @@
 /* eslint-env jest */
 import { createLocalVue, mount } from '@vue/test-utils'
-import VueRootModals from './index'
-import RootModal from './RootModal.vue'
+import { createRenderer } from 'vue-server-renderer'
+import VueRootModals from '../src/index'
+import RootModal from '../src/RootModal.vue'
 import InfoModal from '../example/components/InfoModal.vue'
 import flushPromises from 'flush-promises'
 
@@ -69,6 +70,22 @@ describe('RootModal Component', () => {
     await flushPromises()
     const findedModal = wrapper.find(InfoModal)
     expect(findedModal.is(InfoModal)).toBe(true)
+  })
+
+  test('Matches snapshot', async () => {
+    const renderer = createRenderer()
+    const wrapper = createMount()
+    wrapper.vm.$modals.InfoModal()
+    expect(wrapper.vm.modals.length).toBe(1)
+    expect(wrapper.vm.modals[0]).toMatchObject({
+      modalID: 1,
+      typeModal: 'InfoModal',
+    })
+    await flushPromises()
+    renderer.renderToString(wrapper.vm, (err, str) => {
+      if (err) throw new Error(err)
+      expect(str).toMatchSnapshot()
+    })
   })
 
   test('Testing closing modal by wrapper', () => {
