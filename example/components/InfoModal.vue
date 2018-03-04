@@ -4,10 +4,10 @@
     <div class="modal__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nisi omnis, aspernatur numquam temporibus ullam laborum, in maxime cum dignissimos, culpa eaque? Consectetur dolorum accusamus tempora tenetur laboriosam distinctio eveniet?</div>
     <div class="modal__controls">
       <button
-        @click="closeModal('resolve', 'Modal resolved')"
+        @click="closeModal('resolve', resolveMessage)"
         class="modal__button modal__button--resolve">Resolve</button>
       <button
-        @click="closeModal('reject', 'Modal rejected')"
+        @click="closeModal('reject', rejectMessage)"
         class="modal__button modal__button--reject">Reject</button>
     </div>
   </article>
@@ -20,6 +20,8 @@ export default {
     modalID: Number,
     resolve: Function,
     reject: Function,
+    resolveMessage: String,
+    rejectMessage: String,
   },
   methods: {
     closeModal (typeClose, text) {

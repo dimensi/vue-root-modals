@@ -24,9 +24,12 @@
   "license": "MIT",
   "scripts": {
     "build": "bili",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "test": "tyu",
+    "test:watch": "tyu -- --watch"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.12",
     "autoprefixer": "^8.1.0",
     "babel-eslint": "^8.2.2",
     "bili": "^3.0.2",
@@ -37,9 +40,12 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
+    "flush-promises": "^1.0.0",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-vue": "^3.0.0",
     "stylus": "^0.54.5",
+    "tyu": "^1.0.5",
+    "vue": "^2.5.13",
     "vue-template-compiler": "^2.5.13"
   },
   "keywords": [
