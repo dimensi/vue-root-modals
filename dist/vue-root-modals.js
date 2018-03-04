@@ -1,5 +1,5 @@
 /*!
- * vue-root-modals v0.0.7
+ * vue-root-modals v0.1.0
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
@@ -191,7 +191,9 @@ function () {
             resolve = resolveFromPromise;
             reject = rejectFromPromise;
           });
-          var config = Object.assign({}, options, {
+          var config =
+          /** @type {options} */
+          Object.assign({}, options, {
             resolve: resolve,
             reject: reject,
             typeModal: key
