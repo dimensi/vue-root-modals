@@ -1,6 +1,6 @@
 {
   "name": "vue-root-modals",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Vue modals",
   "main": "dist/vue-root-modals.cjs.js",
   "module": "dist/vue-root-modals.es.js",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "bili",
-    "prepublish": "yarn build",
+    "prepublish": "yarn test && yarn build",
     "test": "tyu",
     "test:watch": "tyu -- --watch"
   },
