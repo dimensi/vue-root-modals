@@ -51,6 +51,8 @@
     "vue-template-compiler": "^2.5.13"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
     ]
