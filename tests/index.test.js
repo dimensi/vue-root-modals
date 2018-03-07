@@ -1,4 +1,3 @@
-/* eslint-env jest */
 import { createLocalVue, mount } from '@vue/test-utils'
 import VueRootModals from '../src/index'
 
