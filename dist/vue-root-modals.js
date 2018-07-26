@@ -193,9 +193,11 @@ function () {
         return;
       }
 
-      this.modals.splice(this.modals.findIndex(function (modal) {
+      var index = this.modals.findIndex(function (modal) {
         return modal.modalID === modalID;
-      }), 1);
+      });
+      if (index === -1) return;
+      this.modals.splice(index, 1);
     }
   }, {
     key: "install",

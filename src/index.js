@@ -46,9 +46,11 @@ class VueRootModals {
       this.modals.splice(0, this.modals.length)
       return
     }
-
+    
+    const index = this.modals.findIndex(modal => modal.modalID === modalID);
+    if (index === -1) return
     this.modals.splice(
-      this.modals.findIndex(modal => modal.modalID === modalID),
+      index,
       1,
     )
   }
