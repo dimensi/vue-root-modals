@@ -12,6 +12,7 @@ class VueRootModals {
    * @memberof VueRootModals
    */
   constructor (components) {
+    this.counterID = 0
     this.registedComponents = components
     this.modals = []
   }
@@ -31,7 +32,7 @@ class VueRootModals {
    * @returns {void}
    */
   openModal (options) {
-    options.modalID = this.modals.length + 1
+    options.modalID = ++this.counterID
     this.modals.push(options)
   }
   /**
