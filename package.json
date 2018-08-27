@@ -34,7 +34,7 @@
     }
   },
   "devDependencies": {
-    "@vue/test-utils": "1.0.0-beta.12",
+    "@vue/test-utils": "1.0.0-beta.24",
     "autoprefixer": "8.1.0",
     "babel-eslint": "8.2.2",
     "bili": "3.0.2",
