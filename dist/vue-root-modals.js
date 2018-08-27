@@ -1,5 +1,5 @@
 /*!
- * vue-root-modals v0.1.1
+ * vue-root-modals v0.1.2
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
@@ -151,6 +151,7 @@ function () {
   function VueRootModals(components) {
     _classCallCheck(this, VueRootModals);
 
+    this.counterID = 0;
     this.registedComponents = components;
     this.modals = [];
   }
@@ -174,7 +175,7 @@ function () {
   _createClass(VueRootModals, [{
     key: "openModal",
     value: function openModal(options) {
-      options.modalID = this.modals.length + 1;
+      options.modalID = ++this.counterID;
       this.modals.push(options);
     }
     /**
