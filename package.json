@@ -36,7 +36,7 @@
   "devDependencies": {
     "@vue/test-utils": "1.0.0-beta.24",
     "autoprefixer": "8.1.0",
-    "babel-eslint": "8.2.2",
+    "babel-eslint": "8.2.6",
     "bili": "3.0.2",
     "eslint": "4.18.2",
     "eslint-config-standard": "11.0.0",
