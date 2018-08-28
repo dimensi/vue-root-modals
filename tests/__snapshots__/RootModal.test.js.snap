@@ -2,20 +2,20 @@
 
 exports[`RootModal Component Matches snapshot 1`] = `
 <div class="vue-root-modal">
-    <div class="vue-root-modal__wrapper" style="z-index:1;">
-        <div class="vue-root-modal__body">
-            <button class="vue-root-modal__close">
-                X
-            </button>
-            <article typeModal="InfoModal" class="modal">
-                <h1 class="modal__title">Title</h1>
-                <div class="modal__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nisi omnis, aspernatur numquam temporibus ullam laborum, in maxime cum dignissimos, culpa eaque? Consectetur dolorum accusamus tempora tenetur laboriosam distinctio eveniet?</div>
-                <div class="modal__controls">
-                    <button class="modal__button modal__button--resolve">Resolve</button>
-                    <button class="modal__button modal__button--reject">Reject</button>
-                </div>
-            </article>
+  <div class="vue-root-modal__wrapper" style="z-index:1;">
+    <div class="vue-root-modal__body">
+      <button class="vue-root-modal__close">
+        X
+      </button>
+      <article typeModal="InfoModal" class="modal">
+        <h1 class="modal__title">Title</h1>
+        <div class="modal__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nisi omnis, aspernatur numquam temporibus ullam laborum, in maxime cum dignissimos, culpa eaque? Consectetur dolorum accusamus tempora tenetur laboriosam distinctio eveniet?</div>
+        <div class="modal__controls">
+          <button class="modal__button modal__button--resolve">Resolve</button>
+          <button class="modal__button modal__button--reject">Reject</button>
         </div>
+      </article>
     </div>
+  </div>
 </div>
 `;
