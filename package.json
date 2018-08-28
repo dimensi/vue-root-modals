@@ -54,7 +54,7 @@
     "tyu": "1.0.5",
     "vue": "2.5.13",
     "vue-server-renderer": "2.5.13",
-    "vue-template-compiler": "2.5.13"
+    "vue-template-compiler": "2.5.17"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
