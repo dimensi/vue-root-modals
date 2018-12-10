@@ -53,7 +53,7 @@
     "stylus": "0.54.5",
     "tyu": "1.0.6",
     "vue": "2.5.17",
-    "vue-server-renderer": "2.5.17",
+    "vue-server-renderer": "2.5.20",
     "vue-template-compiler": "2.5.17"
   },
   "jest": {
