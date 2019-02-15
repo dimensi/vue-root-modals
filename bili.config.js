@@ -1,24 +1,20 @@
-const pgk = require('./package')
-module.exports = {
-  format: ['umd', 'umd-min', 'es', 'cjs'],
+import pgk from './package'
+
+/** @type {import('bili').Config} */
+const config = {
   banner: true,
-  moduleName: pgk.name,
-  plugin: [
-    require('rollup-plugin-vue')({
-      css: 'dist/vue-root-modals.css',
-      postcss: {
-        plugins: [require('autoprefixer')]
+  output: {
+    moduleName: pgk.name,
+    format: ['es', 'cjs'],
+  },
+  plugins: {
+    vue: {
+      css: false,
+      style: {
+        postcssPlugins: [require('autoprefixer')]
       }
-    }),
-    require('rollup-plugin-clear')({
-      targets: ['./dist/']
-    })
-  ],
-  exports: 'named',
-  postcss: {
-    extract: false,
-    plugin: [
-      require('autoprefixer')
-    ]
+    }
   }
 }
+
+export default config
