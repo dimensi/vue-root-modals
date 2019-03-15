@@ -49,9 +49,9 @@
     "standard-version": "5.0.1",
     "stylus": "0.54.5",
     "tyu": "1.0.6",
-    "vue": "2.6.8",
-    "vue-server-renderer": "2.6.8",
-    "vue-template-compiler": "2.6.8"
+    "vue": "2.6.9",
+    "vue-server-renderer": "2.6.9",
+    "vue-template-compiler": "2.6.9"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
