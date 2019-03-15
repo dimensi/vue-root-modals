@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@vue/test-utils": "1.0.0-beta.29",
-    "autoprefixer": "9.4.10",
+    "autoprefixer": "9.5.0",
     "babel-eslint": "10.0.1",
     "bili": "4.4.0",
     "eslint": "5.15.2",
