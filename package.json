@@ -1,6 +1,6 @@
 {
   "name": "vue-root-modals",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Vue modals",
   "main": "dist/vue-root-modals.js",
   "module": "dist/vue-root-modals.mjs",
