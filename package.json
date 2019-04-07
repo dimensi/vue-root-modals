@@ -9,10 +9,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/edDimensi/vue-root-modals.git"
+    "url": "https://github.com/dimensi/vue-root-modals.git"
   },
   "bugs": {
-    "url": "https://github.com/edDimensi/vue-root-modals/issues"
+    "url": "https://github.com/dimensi/vue-root-modals/issues"
   },
   "author": {
     "name": "Nikita Nafranets",
