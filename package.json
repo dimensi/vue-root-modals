@@ -1,6 +1,6 @@
 {
   "name": "vue-root-modals",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Vue modals",
   "main": "dist/index.min.js",
   "module": "dist/index.esm.js",
