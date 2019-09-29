@@ -2,8 +2,8 @@
   "name": "vue-root-modals",
   "version": "0.1.6",
   "description": "Vue modals",
-  "main": "dist/vue-root-modals.js",
-  "module": "dist/vue-root-modals.mjs",
+  "main": "dist/index.min.js",
+  "module": "dist/index.esm.js",
   "files": [
     "dist"
   ],
@@ -20,14 +20,14 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production bili",
+    "build": "bili",
     "release": "standard-version -a",
     "test": "tyu",
     "test:watch": "tyu -- --watch"
   },
   "standard-version": {
     "scripts": {
-      "postbump": "yarn test && yarn build && git add ."
+      "postbump": "npm run test && npm run build && git add ."
     }
   },
   "devDependencies": {

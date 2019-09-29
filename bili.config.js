@@ -1,11 +1,10 @@
-import pgk from './package'
+import pgk from './package.json'
 
 /** @type {import('bili').Config} */
 const config = {
   banner: true,
   output: {
-    moduleName: pgk.name,
-    format: ['es', 'cjs'],
+    format: ['es', 'cjs-min'],
   },
   plugins: {
     vue: {
